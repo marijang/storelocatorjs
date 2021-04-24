@@ -17,6 +17,10 @@ export default {
 		},
 		status: false
 	},
+	messages:{
+		resultsText: 'results sorted by distance correspond to your research!!',
+		noResultsText: 'No results for your request.<br />Please try a new search with differents choices.'
+	},
 	debug: false,
 	geolocation: {
 		startOnLoad: false,

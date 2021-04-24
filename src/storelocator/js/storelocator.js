@@ -571,7 +571,9 @@ export default class Storelocator {
 				if (data !== null) {
 					this.parseStores({
 						stores: data,
-						fitBounds: fitBounds
+						fitBounds: fitBounds,
+						noResultsText: this.options.messages.noResultsText,
+						resultsText: this.options.messages.resultsText
 					})
 				}
 			})
@@ -620,9 +622,11 @@ export default class Storelocator {
 		let noResult = true
 		let { stores } = options
 		let { fitBounds } = options
+		let { noResultsText } = options;
+		let { resultsText } = options;
 		let hmlListResult = `
 			<p class="storelocator-sidebarIntro">
-				${stores.length} results sorted by distance correspond to your research
+				${stores.length} ${resultsText}
 			</p>
 			<ul class="storelocator-sidebarResultsList">`
 
@@ -669,8 +673,7 @@ export default class Storelocator {
 		if (noResult) {
 			this.sidebarResults.innerHTML = `
 				<p class="storelocator-sidebarNoResults">
-					No results for your request.<br />
-					Please try a new search with differents choices.
+					${noResultsText}
 				</p>`
 			if (this.overlayLimit !== null) {
 				this.overlayLimit.setMap(null)
