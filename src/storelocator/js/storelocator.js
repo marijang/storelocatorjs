@@ -844,9 +844,9 @@ export default class Storelocator {
 			label: {
 				text: (data.index + 1).toString(),
 				fontFamily: 'inherit',
-				fontSize: '13px',
+				fontSize: '12px',
 				fontWeight: '500',
-				color: markerStyle ? markerStyle.colorText : '#000'
+				color: markerStyle ? markerStyle.colorText : '#000',
 			}
 		}
 
@@ -939,7 +939,8 @@ export default class Storelocator {
 			scaledSize: new window.google.maps.Size(
 				options.width,
 				options.height
-			)
+			),
+			labelOrigin: new google.maps.Point(options.labelX, options.labelY)
 		}
 		return customSVG.mimetype + btoa(stringMarkerSvg)
 	}

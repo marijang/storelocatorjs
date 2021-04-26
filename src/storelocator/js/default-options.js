@@ -28,8 +28,10 @@ export default {
 	},
 	map: {
 		markers: {
-			width: 30,
-			height: 40,
+			width: 60,
+			height: 60,
+			labelX: 2,
+			labelY: 2,
 			styles: [{
 				category: 'userPosition',
 				colorBackground: '#4285f4',
