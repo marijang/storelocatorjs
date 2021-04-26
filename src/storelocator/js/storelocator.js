@@ -313,6 +313,8 @@
 			 this.sidebar.classList.add('active')
 			 mapView.classList.remove('active')
 		 }
+
+		 
 	 }
  
 	 /**
