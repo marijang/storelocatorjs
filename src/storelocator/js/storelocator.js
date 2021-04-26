@@ -314,7 +314,7 @@
 			 mapView.classList.remove('active')
 		 }
 
-		 
+
 	 }
  
 	 /**
@@ -337,6 +337,7 @@
 	  * @param {Object} e Event listener datas
 	  */
 	 onClickSidebarResultItem (e) {
+		e.preventDefault()
 		 if (
 			 e.target &&
 			 e.target.parentNode.classList.contains('store-center-marker-js')

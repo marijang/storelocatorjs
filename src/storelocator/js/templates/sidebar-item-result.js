@@ -9,7 +9,7 @@ export default function ({store, origin}) {
 		<li class="storelocator-sidebarResultsListItem" data-category="${store.category}">
 			<div class="storelocator-detailStore">
 				${store.title
-					? `<div class="storelocator-detailStoreTitle"><a href="" title="See on the map" class="store-center-marker-js" data-marker-index="${store.index}"><span class="storelocator-detailStoreTitleNumber">${store.index + 1}.</span><span>${store.title}</span></a></div>`
+					? `<div class="storelocator-detailStoreTitle"><a href="" title="See on the map" class="store-center-marker-js" data-marker-index="${store.index}"><span class="storelocator-detailStoreTitleNumber">${store.index + 1}.</span><span class="storelocator-detailStoreTitleLink">${store.title}</span></a></div>`
 				: ``}
 				<a href="http://www.google.fr/maps/dir/${origin}/${store.lat},${store.lng}" title="See the itinerary on Google Maps" target="_blank" class="storelocator-detailStoreDistance">
 					<span>${store.distance.toFixed(2)}km</span>
