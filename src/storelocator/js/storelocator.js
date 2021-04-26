@@ -305,9 +305,11 @@
  
 		 if (e.target.getAttribute('data-target') === 'map') {
 			 mapView.classList.add('active')
+			 this.sidebarResults.classList.remove('active')
 			 this.sidebar.classList.remove('active')
 			 window.google.maps.event.trigger(this.map, 'resize')
 		 } else {
+			 this.sidebarResults.classList.add('active')
 			 this.sidebar.classList.add('active')
 			 mapView.classList.remove('active')
 		 }
