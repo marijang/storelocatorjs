@@ -30,8 +30,8 @@ export default {
 		markers: {
 			width: 60,
 			height: 60,
-			labelX: 2,
-			labelY: 2,
+			labelX: 'auto',
+			labelY: 'auto',
 			styles: [{
 				category: 'userPosition',
 				colorBackground: '#4285f4',
