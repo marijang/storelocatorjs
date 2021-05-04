@@ -482,6 +482,8 @@
 			 this.inputSearch,
 			 {}
 		 )
+
+		 
  
 		 //this.inputSearch.focus()
 		 autocomplete.bindTo('bounds', this.map)
