@@ -484,7 +484,7 @@
 		 )
 
 		 
- 
+		console.log('input focus');	
 		 //this.inputSearch.focus()
 		 autocomplete.bindTo('bounds', this.map)
  
