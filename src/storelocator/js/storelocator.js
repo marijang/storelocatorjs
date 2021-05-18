@@ -503,10 +503,9 @@
 					 lng: place.geometry.location.lng()
 				 })
 			 } else {
-				 alert(place.name);
 				 this.geocoder.geocode(
 					 {
-						 address: place.name
+						address: place.name + ', Croatia';
 					 },
 					 (results, status) => {
 						 if (status === window.google.maps.GeocoderStatus.OK) {
