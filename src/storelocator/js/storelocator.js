@@ -166,7 +166,7 @@
 			 function (e) {
 				 if (e.keyCode === 13) {
 					 e.preventDefault();
-					 alert('ok');
+
 				 }
 			 }
 		 )
@@ -495,9 +495,14 @@
 
 		 autocomplete.addListener('place_changed', () => {
 			 this.loading(true)
-			 let place = autocomplete.getPlace()
+			 let place = autocomplete.getPlace();
+
+  			 let itemFull = document.querySelector(".pac-container .pac-item").innerText;
+    		 let itemQuery = document.querySelector(".pac-container .pac-item .pac-item-query").innerText;
+             let firstResult = itemQuery + ',' + itemFull.substring(itemQuery.length);
 
 			 let placeName = place.name + ', Croatia';
+			 placeName=firstResult;
 
 			 if (place.geometry) {
 				 this.autocompleteRequest({
