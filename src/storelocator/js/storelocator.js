@@ -488,9 +488,10 @@
 			 {}
 		 )
 
-
+		this.inputSearch.blur();
 
 		 //this.inputSearch.focus()
+
 		 autocomplete.bindTo('bounds', this.map)
 
 		 autocomplete.addListener('place_changed', () => {
