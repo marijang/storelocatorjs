@@ -503,6 +503,7 @@
 					 lng: place.geometry.location.lng()
 				 })
 			 } else {
+				 alert(place.name);
 				 this.geocoder.geocode(
 					 {
 						 address: place.name
