@@ -505,7 +505,7 @@
 			 } else {
 				 this.geocoder.geocode(
 					 {
-						address: place.name + ', Croatia'
+						address: place.name
 					 },
 					 (results, status) => {
 						 if (status === window.google.maps.GeocoderStatus.OK) {
