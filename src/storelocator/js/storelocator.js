@@ -497,6 +497,8 @@
 			 this.loading(true)
 			 let place = autocomplete.getPlace()
 
+			 let placeName = place.name + ', Croatia';
+
 			 if (place.geometry) {
 				 this.autocompleteRequest({
 					 lat: place.geometry.location.lat(),
@@ -505,7 +507,7 @@
 			 } else {
 				 this.geocoder.geocode(
 					 {
-						address: place.name
+						address: placeName
 					 },
 					 (results, status) => {
 						 if (status === window.google.maps.GeocoderStatus.OK) {
