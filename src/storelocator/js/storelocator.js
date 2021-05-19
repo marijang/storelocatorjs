@@ -497,13 +497,14 @@
 		 autocomplete.addListener('place_changed', () => {
 			 this.loading(true)
 			 let place = autocomplete.getPlace();
+			 let pacItem = document.querySelector(".pac-container .pac-item");
+			 let placeName = place.name;
 
-  			 let itemFull = document.querySelector(".pac-container .pac-item").innerText;
-    		 let itemQuery = document.querySelector(".pac-container .pac-item .pac-item-query").innerText;
-             let firstResult = itemQuery + ',' + itemFull.substring(itemQuery.length);
-
-			 let placeName = place.name + ', Croatia';
-			 placeName=firstResult;
+			 if(pacItem){
+    		 	let itemQuery = document.querySelector(".pac-container .pac-item .pac-item-query").innerText;
+             	let firstResult = itemQuery + ',' + pacItem.substring(itemQuery.length);
+				placeName=firstResult;
+			 }
 
 			 if (place.geometry) {
 				 this.autocompleteRequest({
